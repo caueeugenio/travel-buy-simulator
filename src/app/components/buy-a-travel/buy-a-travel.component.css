@@ -1,0 +1,10 @@
+input::placeholder {
+
+  /* Firefox, Chrome, Opera */
+
+}
+
+label{
+  display: block;
+  text-align: left;
+}

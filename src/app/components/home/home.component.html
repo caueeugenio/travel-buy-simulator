@@ -1,0 +1,23 @@
+<div class="container text-center">
+  <h1 class="pt-4">Conheça nossos destinos</h1>
+  <hr />
+  <div class="principal-content" class="row">
+    <div *ngFor="let item of destinations" class=" destination-card">
+      <img src="{{ item.url }}" class="card-img-top" alt="picture that destination" />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a routerLink="/buy-a-travel" class="btn btn-primary">Buy this travel</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="footer text-center">
+  <h4 style="font-style: italic;  background-color: aliceblue; width: 100%; position: fixed; bottom: 0; padding: 1em; margin: 0;">Develop by caueeugenio.</h4>
+</div>
+
+
