@@ -12,6 +12,9 @@ const routes: Routes = [
   },
   {
     path: 'buy-a-travel', component: BuyATravelComponent
+  },
+  {
+    path: 'buy-a-travel/:id/:cidade', component: BuyATravelComponent
   }
 ];
 

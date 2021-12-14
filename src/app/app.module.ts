@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { BuyATravelComponent } from './components/buy-a-travel/buy-a-travel.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { BuyATravelComponent } from './components/buy-a-travel/buy-a-travel.comp
     HomeComponent,
     HeaderComponent,
     LoginComponent,
-    BuyATravelComponent
+    BuyATravelComponent,
+    DestinationsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
