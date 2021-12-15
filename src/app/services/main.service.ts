@@ -16,5 +16,8 @@ export class MainService {
   getDestinationsById(id:Number){
     return this.httpClient.get<Destinations>(`${this.apiUrl}/${id}`);
   }
+  addTravel(payload){
+    return this.httpClient.post<Destinations>(`${this.apiUrl}`,payload);
+  }
 
 }

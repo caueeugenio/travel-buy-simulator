@@ -2,19 +2,20 @@
   <div class="row">
     <div class="p-5" style="width: 33.33%">
       <img src="{{ this.imgUrl }}" width="300px" alt="" srcset="" />
-      <h3>Destination: {{ this.name }}</h3>
+      <h3>Destination: {{ this.city }}</h3>
       <h3>Value: {{ this.price | currency }}</h3>
     </div>
 
     <div class="" style="width: 66.67%">
-      <form>
+      <form [formGroup]="travelForm" (ngSubmit)="onSubmit()" >
         <div class="form-group">
-          <label for="exampleFormControlInput1">Name </label>
+          <label for="exampleFormControlInput1">Name</label>
           <input
             type="text"
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="José da Silva"
+            formControlName="name"
           />
           <label for="exampleFormControlInput1">Email address</label>
           <input
@@ -22,6 +23,7 @@
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="name@example.com"
+            formControlName="email"
           />
           <div class="form-group"></div>
         </div>
@@ -33,11 +35,12 @@
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="name@example.com"
+            formControlName="date"
           />
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Dias que pretende ficar</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect1"  formControlName="days">
             <option>5</option>
             <option>10</option>
             <option>15</option>
@@ -51,9 +54,10 @@
             class="form-control"
             id="exampleFormControlTextarea1"
             rows="3"
+            formControlName="obs"
           ></textarea>
         </div>
-        <button class="btn btn-success mt-2" style="width: 100%" type="submit">
+        <button [disabled]="travelForm.invalid"class="btn btn-success mt-2" style="width: 100%" type="submit">
           Buy
         </button>
       </form>

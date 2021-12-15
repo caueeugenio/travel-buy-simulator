@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { BuyATravelComponent } from './components/buy-a-travel/buy-a-travel.component';
 import { DestinationsComponent } from './components/destinations/destinations.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
